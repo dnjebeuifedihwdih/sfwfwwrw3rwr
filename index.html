@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load Test Config</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>تنظیمات تست بار</h1>
+        <p>پارامترهای مورد نظر برای تست سایت را وارد کنید.</p>
+        
+        <div class="form-group">
+            <label for="url">آدرس سایت (URL)</label>
+            <input type="url" id="url" value="https://qazvinfood.com/" placeholder="https://example.com">
+        </div>
+
+        <div class="form-group">
+            <label for="requests">تعداد کل درخواست‌ها</label>
+            <input type="number" id="requests" value="1000" min="1">
+        </div>
+        
+        <div class="form-group">
+            <label for="threads">تعداد ترد (درخواست همزمان)</label>
+            <input type="number" id="threads" value="400" min="1" max="1000">
+        </div>
+
+        <div class="form-group">
+            <label for="delay">تأخیر بین هر درخواست (ثانیه)</label>
+            <input type="number" id="delay" value="0" min="0" step="0.1">
+        </div>
+
+        <button id="start-btn">🚀 شروع تست</button>
+    </div>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
